@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/calender.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+	<style>
+	.mui-content{
+		background-color: #FFFFFF;
+	}
+	.mui-bar-nav {
+	    box-shadow: 0 1px 6px #ffffff;
+	}
+	.head2{
+		box-shadow: 1px 1px 3px #6a6a6a;
+	}
+	#calicon{
+		font-size:24px;
+		color:#F58A8A;
+		position:absolute;
+		right:10px;
+		top:5px;
+	}
+	<button id='demo4' data-options='{"type":"date"}' class="btn mui-btn mui-btn-block">选择日期 ...</button>
+</style>
+	<body>
+
+		<footer>
+			<nav class="mui-bar mui-bar-tab">
+				<a class="mui-tab-item mui-active" href="#tabbar">
+					<i class="fa fa-check-square" style="font-size:30px;color:#F58A8A"></i>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-calender">
+					<i class="fa fa-calendar-o" style="font-size:30px;color:#CBC9C9"></i>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-check">
+					<i class="fa fa-calendar-check-o" style="font-size:30px;color:#CBC9C9"></i>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-perCenter">
+					<i class="fa fa-user" style="font-size:30px;color:#CBC9C9"></i>
+				</a>
+			</nav>
+		</footer>
+
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content mui-active">
+				<header class="mui-bar mui-bar-nav">
+					<h1 class="mui-title">打卡</h1>
+					<i id="calicon" class="fa fa-plus"></i>
+				</header>
+				<div class="mui-content">
+					<div class="title">
+						<!-- 日历表格 -->
+						<table id="calTable" class="table">
+							<tr class="head">
+								<td class="day1">日</td>
+								<td class="day">一</td>
+								<td class="day">二</td>
+								<td class="day">三</td>
+								<td class="day">四</td>
+								<td class="day">五</td>
+								<td class="day1">六</td>
+							</tr>
+
+						</table>
+					</div>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/早起图.jpg">
+								<div class="mui-media-body">
+									早起
+									<p class='mui-ellipsis'>共坚持10天</p>
+								</div>
+								<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+									打卡
+								</button>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/早睡图.jpg">
+								<div class="mui-media-body">
+									早睡
+									<p class='mui-ellipsis'>共坚持10天</p>
+								</div>
+								<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+									打卡
+								</button>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="images/减肥图.jpg">
+								<div class="mui-media-body">
+									21天减肥计划
+									<p class='mui-ellipsis'>共坚持5天</p>
+								</div>
+								<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+									打卡
+								</button>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<div id="tabbar-with-calender" class="mui-control-content">
+				<div>
+					<header class="mui-bar mui-bar-nav">
+						<h1 class="mui-title">2020年6月</h1>
+						<i id="calicon" class="fa fa-calendar-o"></i>
+					</header>
+				</div>
+				<div>
+					<table id="calTable" class="table">
+						<thead>
+							<tr class="head2 ">
+								<td class="day1">日</td>
+								<td class="day">一</td>
+								<td class="day">二</td>
+								<td class="day">三</td>
+								<td class="day">四</td>
+								<td class="day">五</td>
+								<td class="day1">六</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="calBox sun" id="calBox0"></td>
+								<td class="calBox" id="calBox1"></td>
+								<td class="calBox" id="calBox2"></td>
+								<td class="calBox" id="calBox3"></td>
+								<td class="calBox" id="calBox4"></td>
+								<td class="calBox" id="calBox5"></td>
+								<td class="calBox sat" id="calBox6"></td>
+							</tr>
+							<tr>
+								<td class="calBox sun" id="calBox7"></td>
+								<td class="calBox" id="calBox8"></td>
+								<td class="calBox" id="calBox9"></td>
+								<td class="calBox" id="calBox10"></td>
+								<td class="calBox" id="calBox11"></td>
+								<td class="calBox" id="calBox12"></td>
+								<td class="calBox sat" id="calBox13"></td>
+							</tr>
+							<tr>
+								<td class="calBox sun" id="calBox14"></td>
+								<td class="calBox" id="calBox15"></td>
+								<td class="calBox" id="calBox16"></td>
+								<td class="calBox" id="calBox17"></td>
+								<td class="calBox" id="calBox18"></td>
+								<td class="calBox" id="calBox19"></td>
+								<td class="calBox sat" id="calBox20"></td>
+							</tr>
+							<tr>
+								<td class="calBox sun" id="calBox21"></td>
+								<td class="calBox" id="calBox22"></td>
+								<td class="calBox" id="calBox23"></td>
+								<td class="calBox" id="calBox24"></td>
+								<td class="calBox" id="calBox25"></td>
+								<td class="calBox" id="calBox26"></td>
+								<td class="calBox sat" id="calBox27"></td>
+							</tr>
+							<tr>
+								<td class="calBox sun" id="calBox28"></td>
+								<td class="calBox" id="calBox29"></td>
+								<td class="calBox" id="calBox30"></td>
+								<td class="calBox" id="calBox31"></td>
+								<td class="calBox" id="calBox32"></td>
+								<td class="calBox" id="calBox33"></td>
+								<td class="calBox sat" id="calBox34"></td>
+							</tr>
+							<tr>
+								<td class="calBox sun" id="calBox35"></td>
+								<td class="calBox" id="calBox36"></td>
+								<td class="calBox" id="calBox37"></td>
+								<td class="calBox" id="calBox38"></td>
+								<td class="calBox" id="calBox39"></td>
+								<td class="calBox" id="calBox40"></td>
+								<td class="calBox sat" id="calBox41"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+	</body>
+</html>
