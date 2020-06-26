@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+	<body>
+		<style type="text/css">
+			body {
+				background-color: #FFFFFF;
+			}
+
+			#mybtn {
+				background-color: #F58A8A;
+			}
+			#icon,
+			#icon-more {
+				font-size: 24px;
+				color: #000000;
+			}
+			#font{
+				color:#000000;
+			}
+			.mui-content {
+				background-color: #FFFFFF;
+			}
+			.mui-bar-nav {
+				box-shadow: 0 1px 6px #ffffff;
+			}
+			.mui-input-row{
+				border-style: none;
+			}
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			.mui-popover {
+				height: 100px;
+			}
+		</style>
+		<header class="mui-bar mui-bar-nav">
+			<a  class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="icon"></a>
+			<h1 class="mui-title">任务详情</h1>
+			<a id="icon-more" class="mui-action-menu mui-icon mui-icon-more mui-pull-right" href="#topPopover"></a>
+		</header>
+		
+		<div class="mui-content">	
+			<a class="mui-navigate" href="setDate.html" id="font">
+					<p style="margin-left:10px;margin-bottom: 0;"><input name="checkbox" value="Item 1" type="checkbox" class="checkbox">今天,12:50-13:30</p>
+				</a>
+				<div class="mui-input-row">
+					<input type="text" value="番茄钟UI设计" style="border:0;margin-bottom: 0;">
+				</div>
+			<div class="mui-input-row">
+				<textarea id="textarea" rows="20" placeholder="描述" ></textarea>
+			</div>
+			<center>
+				<button id="mybtn" type="submit" style="width: 200px; color:#FFFFFF ;">完成</button>
+			</center>
+		</div>
+		
+		<div id="topPopover" class="mui-popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a href="#" id="set">设置番茄钟</a>
+						</li>
+						<li class="mui-table-view-cell"><a href="#">删除</a>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		
+		<script src="../js/mui.min.js"></script>
+				<script>
+					mui.init();
+					
+					mui.plusReady(function () {
+		//				var view = plus.nativeObj.View.getViewById("title");
+		//				
+		//				var bitmap = new plus.nativeObj.Bitmap("back");
+		//				bitmap.loadBase64Data("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAAAev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8AAACubimgAAAAI3RSTlMAGfUTGfQTGPMSGPIYGhgaGBsXGxcbFxwXHBccFhwWHRYdHWufDPQAAAABYktHRACIBR1IAAAAB3RJTUUH4QETEBwooeTlkQAAAJVJREFUSMft1EkSgkAQRNFGUXFWHBDBibr/HTUwD5B/48Ig1y+io7u6MqUhf5hsNEY+j5hMgZ/FJ8Xc9ovos3T96utjbfqN/Nb0O/m96Uv5g+mP8ifTn+Ur01/ka9Nf5RvTt/I309/lH6Z/yr9Mn+Q71/MT8B34K/E58Enzv8R/K98HvnF8p3lr8F7izce7lbf3kJ/lDQp9HdBhgg3PAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTAxLTE5VDE2OjI4OjQwKzA4OjAwpTDFwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wMS0xOVQxNjoyODo0MCswODowMNRtfX0AAAAASUVORK5CYII=");
+		//				view.drawBitmap(bitmap, {}, {
+		//					top: "10px",
+		//					left: "10px",
+		//					width: "24px",
+		//					height: "24px"
+		//				});
+		//				
+		//				view.setTouchEventRect({top:"0px",left:"0px",width:"44px",height:"100%"});
+					});
+					
+					mui('.mui-scroll-wrapper').scroll();
+					mui('body').on('shown', '.mui-popover', function(e) {
+						//console.log('shown', e.detail.id);//detail为当前popover元素
+					});
+					mui('body').on('hidden', '.mui-popover', function(e) {
+						//console.log('hidden', e.detail.id);//detail为当前popover元素
+					});
+					
+					
+				</script>
+		</div>
+		
+	</body>
+</html>
