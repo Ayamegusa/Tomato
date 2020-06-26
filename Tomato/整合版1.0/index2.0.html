@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/font-awesome.css">
+
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			mui.init();
+		</script>
+	</head>
+	<style>
+		.mui-content>.mui-card:first-child {
+		    margin-top: 0px;
+		}
+	.mui-bar-tab .mui-tab-item {
+	    color: #CCCCCC;
+	}
+	.mui-content{
+		background-color: #FFFFFF;
+	}
+	.mui-bar-nav {
+	    box-shadow:none;
+	}
+	.head2{
+		box-shadow: 1px 1px 3px #6a6a6a;
+	}
+	#calicon{
+		font-size:24px;
+		color:#F58A8A;
+		position:absolute;
+		right:10px;
+		top:5px;
+	}
+	.mui-bar-tab .mui-tab-item.mui-active {
+	    color: #F58A8A;
+	}
+</style>
+	<body>
+		<footer>
+			<nav class="mui-bar mui-bar-tab">
+				<a class="mui-tab-item mui-active" href="#tabbar">
+					<i class="fa fa-check-square" style="font-size:30px;color:"></i>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-calender">
+					<i class="fa fa-calendar-o" style="font-size:30px;"></i>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-check">
+					<i class="fa fa-calendar-check-o" style="font-size:30px;"></i>
+				</a>
+				<a class="mui-tab-item" href="#tabbar-with-perCenter">
+					<i class="fa fa-user" style="font-size:30px;"></i>
+				</a>
+			</nav>
+		</footer>
+		<div id="tabbar" class="mui-control-content mui-active">
+			<header class="mui-bar mui-bar-nav">
+				<h3 class="mui-left" style="margin-top: 10px;">ToDoList</h3>
+				<i id="calicon" class="fa fa-plus" style="margin-top: 7px;"></i>
+			</header>
+			<div class="mui-content" style="padding-bottom:0;">
+				<ul class="mui-table-view" style="margin-top:3px;">
+					<li class="mui-table-view-cell">
+
+						<div class="mui-table-cell mui-col-xs-10">
+							<h4 class="mui-ellipsis" style="margin-bottom: 3px;"><i class="fa fa-square-o"></i> 番茄钟UI设计</h4>
+							<span class="mui-h5" style="font-size:12px;color:#F58A8A;margin-left:20px;">今天，12:50-13:30</span>
+						</div>
+						<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined" id="openTimer()">
+							<span class="mui-h5" style="font-size:20px;color:#F58A8A;">开始</span>
+						</button>
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<div class="mui-table-cell mui-col-xs-10">
+							<h4 class="mui-ellipsis" style="margin-bottom: 3px;"><i class="fa fa-square-o"></i> 待办2</h4>
+							<span class="mui-h5" style="font-size:12px;color:#808080;margin-left:20px;">6月10日，12:00-13:00</span>
+						</div>
+						<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+							<span class="mui-h5" style="font-size:20px;color:#F58A8A">开始</span>
+						</button>
+					</li>
+				</ul>
+				</li>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse" style="background-color:#f5dada;">
+						<a class="mui-navigate-right" href="#" style="height:18px;color:#525050 ;padding:1px 0 0 10px;">已完成</a>
+						<div class="mui-collapse-content">
+							<form class="mui-input-group">
+								<div class="mui-table">
+					<li class="mui-table-view-cell">
+						<h4 class="mui-ellipsis" style="margin-bottom: 3px;"><i class="fa fa-check-square"></i> 图像处理</h4>
+						<span class="mui-h5" style="font-size:12px;color:#808080;margin-left:20px;margin-top:7px"> 昨天，10:30-11:50</span>
+					</li>
+
+					<li class="mui-table-view-cell">
+						<h4 class="mui-ellipsis" style="margin-bottom: 3px;"><i class="fa fa-check-square"></i> 软件工程</h4>
+						<span class="mui-h5" style="font-size:12px;color:#808080;margin-left:20px;"> 昨天，8:30-7:50</span>
+					</li>
+			</div>
+		</div>
+		</li>
+		</ul>
+		</div>
+		</div>
+		<div id="tabbar-with-calender" class="mui-control-content">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">日历</h1>
+				<i id="calicon" class="fa fa-calendar-o" style="margin-top: 2px;"></i>
+			</header>
+			<div class="mui-content">
+				<table id="calTable" class="table">
+					<tr class="head">
+						<td class="day1">日</td>
+						<td class="day">一</td>
+						<td class="day">二</td>
+						<td class="day">三</td>
+						<td class="day">四</td>
+						<td class="day">五</td>
+						<td class="day1">六</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="tabbar-with-check" class="mui-control-content">
+			<header class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">打卡</h1>
+				<i id="calicon" class="fa fa-plus" style="margin-top: 7px;"></i>
+			</header>
+			<div class="mui-content">
+				<div class="title">
+					<!-- 日历表格 -->
+					<table id="calTable" class="table">
+						<tr class="head">
+							<td class="day1">日</td>
+							<td class="day">一</td>
+							<td class="day">二</td>
+							<td class="day">三</td>
+							<td class="day">四</td>
+							<td class="day">五</td>
+							<td class="day1">六</td>
+						</tr>
+
+					</table>
+				</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/早起.png">
+							<div class="mui-media-body">
+								早起
+								<p class='mui-ellipsis'>共坚持10天</p>
+							</div>
+							<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+								打卡
+							</button>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/早睡.png">
+							<div class="mui-media-body">
+								早睡
+								<p class='mui-ellipsis'>共坚持10天</p>
+							</div>
+							<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+								打卡
+							</button>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/运动.png">
+							<div class="mui-media-body">
+								21天减肥计划
+								<p class='mui-ellipsis'>共坚持5天</p>
+							</div>
+							<button type="button" class="mui-btn mui-btn-danger mui-btn-outlined">
+								打卡
+							</button>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="tabbar-with-perCenter" class="mui-control-content">
+			<header class="mui-bar mui-bar-nav" style="background-color: #f6c8c8;">
+				<h4 class="mui-title" style="color:#FFFFFF">个人信息</h4>
+			</header>
+			<div class="mui-content">
+				<div class="mui-card" style="background-color: #f6c8c8;margin:0 0 0 0">
+					<div class="mui-card-content">
+						<div style="width: 375px; height: 120px;">
+							<div style="position: fixed; left:30px; top:77px; width:70px; height: 70px;border-radius: 50%;overflow: hidden;">
+								<img src='img/早起.png' style="width:40px">
+							</div>
+							<div style="position: absolute; left: 100px;top: 35px; color: #FFFFFF;">昵称：白雪公主</div>
+							<div style="position: absolute; left: 100px; top: 55px; color: #FFFFFF;">个人签名：学习使我快乐</div>
+							<div style="position: absolute; right: 5px; bottom: 0; font-size: 50%; color: #FFFFFF;">*注册于2020-06-05</div>
+						</div>
+					</div>
+				</div>
+				<ul id="list" class="mui-table-view mui-table-view-chevron">
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="infomation.html">
+							<i class="fa fa-gear" style="font-size:20px;color: #f6c8c8;"></i> 设置个人信息
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="examples/badges.html">
+							<i class="fa fa-bell" style="font-size:20px;color: #f6c8c8;"></i> 声音与提醒
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" data-title-type="native" href="examples/card.html">
+							<i class="fa fa-exclamation-circle" style="font-size:20px;color: #f6c8c8;"></i> 关于番茄list
+						</a>
+					</li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="examples/checkbox.html">
+							<i class="fa fa-paper-plane" style="font-size:20px;color: #f6c8c8;"></i> 分享给朋友
+						</a>
+					</li>
+					<li class="mui-table-view-divider"> </li>
+					<li class="mui-table-view-cell">
+						<a class="mui-navigate-right" href="examples/dialog.html">
+							修改密码
+						</a>
+					</li>
+					<li id="confirmBtn" class="mui-table-view-cell">
+						退出登录
+					</li>
+				</ul>
+			</div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		var info = document.getElementById("info");
+		document.getElementById("confirmBtn").addEventListener('tap', function() {
+			var btnArray = ['否', '是'];
+			mui.confirm('退出登录，确认？', 'Hello 白雪公主', btnArray, function(e) {
+				if (e.index == 1) {
+					window.location.href = "http://baidu.com"
+				} else {
+					window.location.href = "index.html"
+				}
+			})
+		});
+		document.querySelector('button').addEventListener('tap', function() {
+			mui.openWindow({
+				url: 'timer.html',
+				extras: {
+					name: 'mui'
+				}
+			});
+		});
+	</script>
+</html>

@@ -1,0 +1,51 @@
+body, td, input {
+    font-family:Arial;
+    font-size:12px;
+}
+
+/* 日程表格样式 */
+#calTable {
+    border-collapse:collapse;
+    border:1px;
+}
+
+/* 每日单元格样式 */
+td.calBox {
+    border:1px solid rgba(268,167,167,33);
+    width:61px;
+    height:107px;
+    vertical-align:top;
+	box-shadow: #000000;
+}
+
+/* 每日单元格内日期样式 */
+td.calBox div.date {
+    background:#3b3b3b;
+    font-size:11px;
+    padding:2px;
+    cursor:pointer;
+}
+
+/* 每日单元格内周六周日样式 */
+td.sat div.date, td.sun div.date{
+    color:red;
+}
+
+/* 今日样式 */
+td.calBox div.today {
+    background:#BBCCDD;
+}
+
+/* 周标识样式 */
+td.day {
+    text-align:center;
+    background:#FFFFFF;
+    color:#969393;
+}
+td.day1 {
+    text-align:center;
+    background:#FFFFFF;
+    color:#F8A7A7;
+}
+
+
