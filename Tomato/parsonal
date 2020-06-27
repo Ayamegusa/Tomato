@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人中心</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+	<style>
+		.mui-bar{
+			background-color: #f6c8c8;
+		}
+		.mui-card{
+			background-color: #f6c8c8;
+		}
+		.mui-title{
+			color: #FFFFFF;
+		}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<h4 class="mui-title">个人信息</h4>
+	</header>
+	<div class="mui-content">
+		<div class="mui-card">
+			<div class="mui-card-content">
+				<div style="width: 375px; height: 120px;">
+					<div style="position: fixed; left:30px; top:77px; width:70px; height: 70px;border-radius: 50%;overflow: hidden;">
+						<img src='photo/11.jpg' />
+					</div>
+					<div style="position: absolute; left: 100px;top: 35px; color: #FFFFFF;">昵称：白雪公主</div>
+					<div style="position: absolute; left: 100px; top: 55px; color: #FFFFFF;">个人签名：学习使我快乐</div>
+					<div style="position: absolute; right: 0; bottom: 0; font-size: 50%; color: #FFFFFF;">*注册于2020-06-05</div>
+				</div>
+			</div>
+		</div>
+		<ul id="list" class="mui-table-view mui-table-view-chevron">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="infomation.html">
+					<i class="fa fa-gear" style="font-size:20px;color: #f6c8c8;"></i>   设置个人信息
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="sound&warn.html">
+					<i class="fa fa-bell" style="font-size:20px;color: #f6c8c8;"></i>      声音与提醒
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" data-title-type="native" href="aboutTomatolist.html">
+					<i class="fa fa-exclamation-circle" style="font-size:20px;color: #f6c8c8;"></i>      关于番茄list
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="examples/checkbox.html">
+					<i class="fa fa-paper-plane" style="font-size:20px;color: #f6c8c8;"></i>       分享给朋友
+				</a>
+			</li>
+			<li class="mui-table-view-divider">     </li> 
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="changepasw.html">
+					修改密码
+				</a>
+			</li>
+			<li id="confirmBtn" class="mui-table-view-cell">
+				退出登录
+			</li>
+			
+		
+		</ul>
+	</div>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		var info = document.getElementById("info");
+		document.getElementById("confirmBtn").addEventListener('tap', function() {
+			var btnArray = ['否', '是'];
+			mui.confirm('退出登录，确认？', 'Hello 白雪公主', btnArray, function(e) {
+				if (e.index == 1) {
+						window.location.href="http://baidu.com"}
+				 else {
+					window.location.href="index.html"
+				}
+			})
+		});
+	</script>
+</body>
+</html>
